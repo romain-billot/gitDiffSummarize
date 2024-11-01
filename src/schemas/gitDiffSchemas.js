@@ -1,7 +1,7 @@
 const Joi = require('joi');
 
 const gitDiffSchema = Joi.string()
-	.pattern(/[\s\S]*diff --git[\s\S]*ndex[\s\S]*---[\s\S]*\+\+\+[\s\S]*@@/)
+	.pattern(/(diff --git)*(---)*(\+\+\+)*(@@)*([Ii]ndex)/)
 	.required()
 	.min(10)
 	.max(200000)
