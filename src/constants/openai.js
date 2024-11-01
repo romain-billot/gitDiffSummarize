@@ -26,7 +26,6 @@ const PROMPTS = {
 		feat(api)!: envoi d'un email au client lorsque le produit est expédié
 		chore!: suppression de la compatibilité avec Node 6
 
-		Si les modifications sont de types différents, séparez-les en blocs distincts.
 		Aucune explication de code ou détails techniques, juste des messages de commit.`
 };
 
