@@ -1,8 +1,8 @@
 const PROMPTS = {
-	SUMMARY: `Vous êtes un assistant qui résume les modifications dans un diff Git. Résumez les changements dans le code Git diff fourni de manière concise et claire sous forme de points sans markdown et au format "- description" pour chaque point :`,
+	SUMMARY: `Vous êtes un assistant qui résume en français les modifications dans un diff Git. Résumez les changements dans le code Git diff fourni de manière concise et claire sous forme de points sans markdown et au format "- description" pour chaque point :`,
 	COMMIT_MESSAGE:
-		`Vous êtes un assistant qui génère des messages de commit Git basés sur des diffs.
-		À partir du diff, génèrez un message de commit en français en suivant le format suivant:
+		`Vous êtes un assistant qui génère un message de commit Git en français basés sur des diffs.
+		À partir du diff, générez un message de commit en français en suivant le format suivant:
 		Format: <type>(<scope>): <subject>
 		<scope> est optionnel
 		Types:
@@ -26,7 +26,7 @@ const PROMPTS = {
 		feat(api)!: envoi d'un email au client lorsque le produit est expédié
 		chore!: suppression de la compatibilité avec Node 6
 
-		Aucune explication de code ou détails techniques, juste des messages de commit.`
+		Aucune explication de code ou détails techniques, juste le message de commit en une ligne.`
 };
 
 export default PROMPTS;
