@@ -7,8 +7,8 @@ export function Footer() {
 		<div className="flex flex-col gap-4 px-10 py-4 w-full">
 			<Separator/>
 			<div className="flex justify-between items-center">
-				<p>© {new Date().getFullYear()} gitDiffSummarize</p>
-				<p>Romain Billot</p>
+				<p className="text-sm">© {new Date().getFullYear()} gitDiffSummarize</p>
+				<p className="text-sm">Romain Billot</p>
 			</div>
 		</div>
 	);

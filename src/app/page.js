@@ -67,14 +67,6 @@ export default function Home() {
 
 			<div className="flex justify-end gap-4">
 				<Button
-					onClick={handleButtonClick('/api/summarize')}
-					type="submit"
-					disabled={loading}
-				>
-					Obtenir un résumé
-				</Button>
-
-				<Button
 					onClick={handleButtonClick('/api/commit-message')}
 					type="submit"
 					disabled={loading}
@@ -82,6 +74,14 @@ export default function Home() {
 					className="secondary-foreground"
 				>
 					Obtenir un message de commit
+				</Button>
+
+				<Button
+					onClick={handleButtonClick('/api/summarize')}
+					type="submit"
+					disabled={loading}
+				>
+					Obtenir un résumé
 				</Button>
 			</div>
 
@@ -99,8 +99,8 @@ export default function Home() {
 			}
 
 			{openaiResponse && (
-				<div>
-					<div className="relative border rounded p-4">
+				<div className="relative border rounded p-3 bg-primary-foreground">
+					<div>
 						<Button
 							onClick={() => {
 								navigator.clipboard.writeText(openaiResponse);
@@ -109,12 +109,12 @@ export default function Home() {
 									className: "w-fit fixed bottom-0 right-0 m-5"
 								});
 							}}
-							className="absolute bottom-1 right-1 rounded w-8 h-8"
+							className="absolute bottom-2 right-2 rounded w-8 h-8"
 							aria-label="Copier le résumé"
 						>
 							<Copy/>
 						</Button>
-						<p className="whitespace-pre-line text-sm bg-primary-foreground">{openaiResponse}</p>
+						<p className="whitespace-pre-line text-sm pb-8">{openaiResponse}</p>
 					</div>
 				</div>
 			)}
