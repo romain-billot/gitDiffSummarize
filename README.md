@@ -17,6 +17,8 @@ messages de commit à partir de diffs Git.
 - **Génération de Message de Commit :** Produit des messages de commit descriptifs et concis basés sur les diffs
   selon les meilleures pratiques ([Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)).
 
+   ![Exemple d'utilisation](https://github.com/eigarom/gitDiffSummarize/blob/main/doc/use-cases.gif)
+
 ## Technologies Utilisées
 
 - [Next.js](https://nextjs.org/) - Framework React pour les applications server-rendered.
@@ -86,8 +88,6 @@ Suivez ces étapes pour configurer l'application en local.
 ## Utilisation
 
 1. **Entrer le Diff Git**
-
-   [Exemple d'utilisation](https://github.com/eigarom/gitDiffSummarize/blob/main/doc/use-cases.gif))
 
    Dans la zone de texte fournie, collez votre diff Git. Assurez-vous que le diff suit le format standard de Git diff.
 
