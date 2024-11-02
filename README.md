@@ -30,8 +30,8 @@ Suivez ces étapes pour configurer l'application en local.
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org)
+- [npm](https://www.npmjs.com) ou [Yarn](https://yarnpkg.com)
 - Une [clé API OpenAI](https://platform.openai.com/account/api-keys)
 
 ### Étapes
