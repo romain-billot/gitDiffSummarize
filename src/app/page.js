@@ -55,7 +55,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="flex flex-col gap-6">
+		<div className="flex flex-col gap-6 m-4">
 			<Textarea
 				value={diff}
 				onChange={(e) => setDiff(e.target.value)}

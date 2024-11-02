@@ -5,7 +5,7 @@ import {Title} from "@components/Title";
 
 export function Header() {
 	return (
-		<div className="flex justify-between items-center px-10 pt-4">
+		<div className="flex justify-between items-center py-4 w-full px-4 max-w-screen-sm">
 			<Title title="gitDiffSummarize"/>
 			<ModeToggle/>
 		</div>

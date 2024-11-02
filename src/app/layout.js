@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({children}) {
 	return (
 		<html lang="fr" suppressHydrationWarning>
-		<body className="antialiased flex flex-col min-h-screen">
+		<body className="antialiased flex flex-col items-center min-h-screen">
 			<ThemeProvider
 				attribute="class"
 				defaultTheme="dark"
@@ -21,7 +21,7 @@ export default function RootLayout({children}) {
 				disableTransitionOnChange
 			>
 				<Header/>
-				<main className="flex-grow w-screen p-10 pb-20">
+				<main className="flex-grow w-screen pb-20 max-w-screen-sm">
 					{children}
 				</main>
 				<Footer/>
