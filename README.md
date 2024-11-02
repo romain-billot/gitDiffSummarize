@@ -3,6 +3,8 @@
 Git Diff Summarize est une application web qui utilise l'API GPT-4 d'OpenAI pour générer des résumés concis et des
 messages de commit à partir de diffs Git.
 
+[git-diff-summarize.vercel.app](git-diff-summarize.vercel.app)
+
 ## Table des Matières
 
 - [Fonctionnalités](#fonctionnalités)
