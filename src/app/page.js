@@ -65,7 +65,15 @@ export default function Home() {
 				className="w-full bg-primary-foreground"
 			></Textarea>
 
-			<div className="flex justify-end gap-4">
+			<div className="flex flex-col md:flex-row-reverse justify-start gap-4">
+				<Button
+					onClick={handleButtonClick('/api/summarize')}
+					type="submit"
+					disabled={loading}
+				>
+					Obtenir un résumé
+				</Button>
+
 				<Button
 					onClick={handleButtonClick('/api/commit-message')}
 					type="submit"
@@ -74,14 +82,6 @@ export default function Home() {
 					className="secondary-foreground"
 				>
 					Obtenir un message de commit
-				</Button>
-
-				<Button
-					onClick={handleButtonClick('/api/summarize')}
-					type="submit"
-					disabled={loading}
-				>
-					Obtenir un résumé
 				</Button>
 			</div>
 
