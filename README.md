@@ -87,7 +87,7 @@ Suivez ces étapes pour configurer l'application en local.
 
 1. **Entrer le Diff Git**
 
-   [Exemple d'utilisation](doc/use-cases.gif)
+   [Exemple d'utilisation](https://github.com/eigarom/gitDiffSummarize/blob/main/doc/use-cases.gif))
 
    Dans la zone de texte fournie, collez votre diff Git. Assurez-vous que le diff suit le format standard de Git diff.
 
