@@ -8,7 +8,6 @@ messages de commit à partir de diffs Git.
 - [Fonctionnalités](#fonctionnalités)
 - [Technologies Utilisées](#technologies-utilisées)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Utilisation](#utilisation)
 - [Licence](#licence)
 - [Contact](#contact)
