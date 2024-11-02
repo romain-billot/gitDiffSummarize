@@ -9,7 +9,6 @@ messages de commit à partir de diffs Git.
 - [Technologies Utilisées](#technologies-utilisées)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Licence](#licence)
 - [Contact](#contact)
 
 ## Fonctionnalités
@@ -113,10 +112,6 @@ Suivez ces étapes pour configurer l'application en local.
 3. **Générer un Message de Commit**
 
    Cliquez sur le bouton "Obtenir un message de commit" pour générer un message de commit descriptif basé sur le diff.
-
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE).
 
 ## Contact
 
