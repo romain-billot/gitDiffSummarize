@@ -79,7 +79,6 @@ export default function Home() {
 					type="submit"
 					disabled={loading}
 					variant="secondary"
-					className="secondary-foreground"
 				>
 					Obtenir un message de commit
 				</Button>
@@ -89,11 +88,9 @@ export default function Home() {
 
 			{loading &&
 				<div className="flex flex-col gap-2 border rounded p-2">
-					<Skeleton className="h-5 w-full"/>
-					<Skeleton className="h-5 w-full"/>
-					<Skeleton className="h-5 w-full"/>
-					<Skeleton className="h-5 w-full"/>
-					<Skeleton className="h-5 w-full"/>
+					{Array.from({length: 5}).map((_, index) => (
+						<Skeleton key={index} className="h-5 w-full"/>
+					))}
 					<Skeleton className="h-5 w-[200px]"/>
 				</div>
 			}
