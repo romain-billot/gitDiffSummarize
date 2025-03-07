@@ -12,14 +12,24 @@ export const generateOpenaiMessage = async (diff, prompt) => {
 
 	const openai = initializeOpenAI();
 	try {
-		const completion = await openai.chat.completions.create({
+		const stream = await openai.chat.completions.create({
 			model: "gpt-4o",
+			stream: true,
 			messages: [
 				{"role": "user", "content": prompt + diff}
 			]
 		});
 
-		return completion.choices[0].message.content;
+		let fullResponse = '';
+
+		// Itération sur les chunks du flux reçu
+		for await (const part of stream) {
+			const content = part.choices?.[0]?.delta?.content || '';
+			process.stdout.write(content); // Affiche le contenu au fur et à mesure
+			fullResponse += content;
+		}
+
+		return fullResponse;
 
 	} catch (error) {
 		console.error(error);
