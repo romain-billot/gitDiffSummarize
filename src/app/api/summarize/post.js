@@ -22,6 +22,6 @@ export const POST = async (req) => {
 		console.log("Requête de résumé");
 		return new Response(JSON.stringify({response}), {status: 200});
 	} catch (error) {
-		return new Response(JSON.stringify({error: 'Erreur lors de la génération de la réponse.'}), {status: 500});
+		return new Response(JSON.stringify({error: error.message}), {status: 500});
 	}
 }

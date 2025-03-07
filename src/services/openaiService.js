@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+import { setTimeout } from 'timers/promises';
 
 const initializeOpenAI = () => {
 	if (!process.env.OPENAI_API_KEY) {
@@ -8,31 +9,33 @@ const initializeOpenAI = () => {
 	return new OpenAI({apiKey: process.env.OPENAI_API_KEY});
 };
 
-export const generateOpenaiMessage = async (diff, prompt) => {
+export const generateOpenaiMessage = async (diff, prompt, timeout = 9500) => {
 
 	const openai = initializeOpenAI();
 	try {
-		const stream = await openai.chat.completions.create({
-			model: "gpt-4o",
-			stream: true,
+		const openAIPromise =  openai.chat.completions.create({
+			model: "gpt-4o-mini",
 			messages: [
 				{"role": "user", "content": prompt + diff}
 			]
 		});
 
-		let fullResponse = '';
+		const completion = await Promise.race([
+			openAIPromise,
+			setTimeout(timeout).then(() => {
+				throw new Error(`Requête annulée : délai de 10 secondes dépassé (Vercel).`);
+			})
+		]);
 
-		// Itération sur les chunks du flux reçu
-		for await (const part of stream) {
-			const content = part.choices?.[0]?.delta?.content || '';
-			process.stdout.write(content); // Affiche le contenu au fur et à mesure
-			fullResponse += content;
-		}
-
-		return fullResponse;
+		return completion.choices[0].message.content;
 
 	} catch (error) {
 		console.error(error);
+
+		if (error && error.message.includes("Requête annulée")) {
+			throw new Error(error.message);
+		}
+
 		throw new Error('Erreur lors de la génération de la réponse.');
 	}
 };
